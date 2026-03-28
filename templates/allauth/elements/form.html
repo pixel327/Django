@@ -1,8 +1,16 @@
 {% load allauth %}
-<form method="{{ attrs.method }}"
-      {% if attrs.action %}action="{{ attrs.action }}"{% endif %}>
-    {% slot body %}
-    {% endslot %}
-    {% slot actions %}
-    {% endslot %}
-</form>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <form method="{{ attrs.method }}"
+        {% if attrs.action %}action="{{ attrs.action }}"{% endif %}>
+      {% slot body %}
+      {% endslot %}
+        <div class="d-grid mt-3">
+          {% slot actions %}
+          {% endslot %}
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
